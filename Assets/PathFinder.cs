@@ -7,6 +7,8 @@ public class PathFinder : MonoBehaviour
 {
 
     public GameObject vehiclePrefab;
+    Vector3 characterVehiclePos = new(0, 0, 0);
+    public GameObject characterVehiclePrefab;
     public RoadNode goalNode;
     public RoadNode startNode; 
 
@@ -21,6 +23,7 @@ public class PathFinder : MonoBehaviour
 
     private GameObject spawn(GameObject vehiclePrefab, Vector3 position)
     {
+        GameObject characterVehicle = Instantiate(characterVehiclePrefab, characterVehiclePos, Quaternion.identity, transform);
       
         GameObject vehicle = Instantiate(vehiclePrefab, position, Quaternion.identity, transform);
         return vehicle;
@@ -44,10 +47,6 @@ public class PathFinder : MonoBehaviour
         Debug.Log(node.Position);
         startNode = node;
         vehicle = spawn(vehiclePrefab, startNode.Position);
-    }
-    private void startTravel()
-    {
-        isMoving = true;
     }
 
     private void findPathAndStartMoving()
