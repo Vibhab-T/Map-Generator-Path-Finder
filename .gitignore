@@ -1,0 +1,58 @@
+# This .gitignore is tailored for Unity projects
+# =================================================
+
+# User settings
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Build results
+[Bb]uild/
+[Bb]uilds/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+
+# Assets
+*.apk
+*.aab
+*.unitypackage
+*.prefab.meta
+
+# Generated files
+UserSettings/
+MemoryCaptures/
+*.vs/
+.idea/
+*.swp
+*.tmp
+*.bak
+*.orig
+*.suo
+*.user
+
+.vs/
+.vs
+
+# Crash Reports
+sysinfo.txt
+
+# Visual Studio / JetBrains
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.userprefs
+
+# Other
+*.ds_store
+Thumbs.db
